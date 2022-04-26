@@ -1,0 +1,78 @@
+.header {
+  background-color: $background;
+  color: $text-white;
+  display: grid;
+  grid-template-areas: "logo list contact";
+  grid-template-columns: 15% 1fr 15%;
+  min-height: 15vh;
+  width: 100%;
+  &__h1 {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__span {
+    font-family: "Rajdhani", sans-serif;
+    padding: 0 6px;
+    &--red {
+      color: $logo-red;
+      &::before {
+        content: " ";
+        display: inline-block;
+        margin: 0 8px;
+        width: 10px;
+        height: 10px;
+        background-color: $logo-blue;
+      }
+    }
+    &--blue {
+      color: $logo-blue;
+    }
+  }
+  &__list {
+    grid-area: list;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    &Item {
+      transition: color 0.75s ease-in-out;
+      &:hover {
+        color: $logo-blue;
+      }
+    }
+  }
+  &__container {
+    grid-area: contact;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    &--contact {
+      display: flex;
+      flex-direction: column;
+    }
+    &--search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__link {
+    &--logo {
+      display: flex;
+      flex-direction: row;
+      font-size: 52px;
+    }
+  }
+  &__button {
+    width: 20px;
+    height: 10px;
+    &--language {
+      margin: 0 6px;
+    }
+  }
+}

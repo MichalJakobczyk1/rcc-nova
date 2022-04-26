@@ -1,0 +1,36 @@
+.section {
+  &__span {
+    font-size: 48px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    padding: 0 0 0 64px;
+  }
+  &--logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    font-size: 80px;
+    font-weight: 700;
+    font-family: "Rajdhani", sans-serif;
+    &::before {
+      content: " ";
+      margin: 8px 0;
+      position: relative;
+      left: -40px;
+      width: 30%;
+      height: 5px;
+      background-color: $logo-red;
+    }
+    &::after {
+      content: " ";
+      margin: 8px 0;
+      position: relative;
+      left: 40px;
+      width: 30%;
+      height: 5px;
+      background-color: $logo-blue;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.section {
+  &--research {
+    display: grid;
+    grid-template-areas:
+      "researchImg . research"
+      "researchimg researchInfo researchInfo"
+      "offer . offerImg"
+      "offerInfo offerInfo offerImg"
+      "safety safety safety"
+      "safetyInfo safetyInfo safetyInfo"
+      "Ue Ue flag";
+    grid-template-columns: 30% 20% 50%;
+    grid-template-rows: 10vh 20vh 10vh 20vh 10vh 20vh 10vh;
+  }
+  &__image {
+    width: 100px;
+    &--research {
+      grid-area: researchImg;
+    }
+    &--offer {
+      grid-area: offerImg;
+    }
+    &--flag {
+      grid-area: flag;
+    }
+  }
+  &__h2--research {
+    grid-area: research;
+  }
+  &__paragraph {
+    &--researchInfo {
+      grid-area: researchInfo;
+    }
+    &--offer {
+      grid-area: offerInfo;
+    }
+    &--safety {
+      grid-area: safetyInfo;
+    }
+  }
+  &__h3 {
+    &--offer {
+      grid-area: offer;
+    }
+    &--safety {
+      grid-area: safety;
+    }
+  }
+  &__strong {
+    &--Ue {
+      grid-area: Ue;
+    }
+  }
+}

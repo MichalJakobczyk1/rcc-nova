@@ -1,6 +1,94 @@
 @import "~normalize.css";
 @import "_variables";
-@import "modules/hello.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=Roboto:wght@100;300;400;700&display=swap");
 
-body {
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.body {
+  background-color: $background-secondary;
+  font-family: "Roboto", sans-serif;
+  &--preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+  }
+}
+
+.header {
+  background-color: $background;
+  color: $text-white;
+  display: grid;
+  grid-template-areas: "logo list contact";
+  grid-template-columns: 15% 1fr 15%;
+  height: 10%;
+  &__h1 {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__span {
+    font-family: "Rajdhani", sans-serif;
+    padding: 0 6px;
+    &--red {
+      color: $logo-red;
+      &::before {
+        content: " ";
+        display: inline-block;
+        margin: 0 8px;
+        width: 10px;
+        height: 10px;
+        background-color: $logo-blue;
+      }
+    }
+    &--blue {
+      color: $logo-blue;
+    }
+  }
+  &__list {
+    grid-area: list;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 22px;
+    &Item {
+      transition: color 0.75s ease-in-out;
+      &:hover {
+        color: $logo-blue;
+      }
+    }
+  }
+  &__container {
+    grid-area: contact;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    &--contact {
+      display: flex;
+      flex-direction: column;
+    }
+    &--search {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__link {
+    &--logo {
+      display: flex;
+      flex-direction: row;
+      font-size: 48px;
+    }
+  }
 }

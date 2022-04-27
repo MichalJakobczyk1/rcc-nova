@@ -1,19 +1,35 @@
 .section {
+  &__article {
+    margin: 48px 0;
+    text-align: justify;
+    &--research {
+      display: grid;
+      grid-template-areas:
+        ". . research"
+        "researchImg researchInfo researchInfo";
+      grid-template-columns: 30% 20% 50%;
+      grid-template-rows: 10vh 20vh;
+    }
+    &--offer {
+      display: grid;
+      grid-template-areas:
+        "offer . ."
+        "offerInfo offerInfo offerImg";
+      grid-template-columns: 50% 20% 30%;
+      grid-template-rows: 10vh 20vh;
+    }
+    &--safety {
+      display: flex;
+      flex-direction: column;
+    }
+  }
   &--research {
-    display: grid;
-    grid-template-areas:
-      "researchImg . research"
-      "researchimg researchInfo researchInfo"
-      "offer . offerImg"
-      "offerInfo offerInfo offerImg"
-      "safety safety safety"
-      "safetyInfo safetyInfo safetyInfo"
-      "Ue Ue flag";
-    grid-template-columns: 30% 20% 50%;
-    grid-template-rows: 10vh 20vh 10vh 20vh 10vh 20vh 10vh;
+    display: flex;
+    flex-direction: column;
   }
   &__image {
-    width: 100px;
+    margin: auto;
+    width: 250px;
     &--research {
       grid-area: researchImg;
     }
@@ -22,12 +38,33 @@
     }
     &--flag {
       grid-area: flag;
+      width: 100px;
     }
   }
-  &__h2--research {
-    grid-area: research;
+  &__h2 {
+    background-color: $background;
+    color: $background-main;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 24px;
+    &--research {
+      grid-area: research;
+    }
+    &--offer {
+      grid-area: offer;
+      justify-content: flex-end;
+      padding: 0 24px 0 0;
+    }
+    &--safety {
+      justify-content: center;
+      grid-area: safety;
+      height: 60px;
+    }
   }
   &__paragraph {
+    font-size: 20px;
+    padding: 16px;
     &--researchInfo {
       grid-area: researchInfo;
     }
@@ -37,18 +74,10 @@
     &--safety {
       grid-area: safetyInfo;
     }
-  }
-  &__h3 {
-    &--offer {
-      grid-area: offer;
-    }
-    &--safety {
-      grid-area: safety;
-    }
-  }
-  &__strong {
     &--Ue {
-      grid-area: Ue;
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
     }
   }
 }

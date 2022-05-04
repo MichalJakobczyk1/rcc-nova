@@ -19,8 +19,13 @@
       grid-template-rows: 10vh 20vh;
     }
     &--safety {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-areas:
+        ". . safety"
+        "flagImg safetyInfo safetyInfo"
+        "flagImg safetyPara safetyPara";
+      grid-template-columns: 30% 20% 50%;
+      grid-template-rows: 10vh 20vh 5vh;
     }
   }
   &--research {
@@ -37,12 +42,12 @@
       grid-area: offerImg;
     }
     &--flag {
-      grid-area: flag;
-      width: 100px;
+      grid-area: flagImg;
     }
   }
   &__h2 {
     background-color: $background;
+    border-radius: 15px 0 0 15px;
     color: $background-main;
     text-transform: uppercase;
     display: flex;
@@ -53,6 +58,7 @@
     }
     &--offer {
       grid-area: offer;
+      border-radius: 0 15px 15px 0;
       justify-content: flex-end;
       padding: 0 24px 0 0;
     }
@@ -75,6 +81,7 @@
       grid-area: safetyInfo;
     }
     &--Ue {
+      grid-area: safetyPara;
       font-size: 22px;
       font-weight: 700;
       text-align: center;

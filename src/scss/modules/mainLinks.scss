@@ -1,0 +1,24 @@
+.section {
+  &--mainLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 32px 0;
+  }
+  &__tile {
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 30%;
+    height: 50vh;
+    margin: 32px 16px;
+    &--analysis {
+      background-image: url("/src/assets/img/analizy.png");
+    }
+    &--research {
+      background-image: url("/src/assets/img/badania.png");
+    }
+    &--products {
+      background-image: url("/src/assets/img/produkty.png");
+    }
+  }
+}

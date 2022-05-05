@@ -1,0 +1,25 @@
+.section {
+  &--secondaryLinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 64px 0;
+  }
+  &__tile {
+    &--secondaryLinks {
+      width: 20%;
+    }
+    &--train {
+      background-image: url("/src/assets/img/train.jpg");
+    }
+    &--motor {
+      background-image: url("/src/assets/img/motor.jpg");
+    }
+    &--energy {
+      background-image: url("/src/assets/img/energy.jpg");
+    }
+    &--machine {
+      background-image: url("/src/assets/img/machine.jpg");
+    }
+  }
+}

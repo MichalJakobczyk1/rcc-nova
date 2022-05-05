@@ -67,9 +67,7 @@ module.exports = {
         {
           from: "public",
           globOptions: {
-            ignore: [
-              '**/*.DS_Store'
-            ],
+            ignore: ["**/*.DS_Store"],
           },
         },
       ],
@@ -87,6 +85,54 @@ module.exports = {
       inject: true,
       chunks: ["index", "another"],
       filename: "another.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/company.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "company.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/analysis.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "analysis.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/contact.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "contact.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/industry.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "industry.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/news.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "news.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/products.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "products.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/references.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "references.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/research.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "research.html",
     }),
   ],
 };

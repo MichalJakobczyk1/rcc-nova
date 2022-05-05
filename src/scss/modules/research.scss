@@ -1,6 +1,7 @@
 .section {
   &__article {
-    margin: 48px 0;
+    margin: 64px 0;
+    padding: 32px 0;
     text-align: justify;
     &--research {
       display: grid;
@@ -34,7 +35,7 @@
   }
   &__image {
     margin: auto;
-    width: 250px;
+    width: 30vh;
     &--research {
       grid-area: researchImg;
     }
@@ -69,7 +70,8 @@
     }
   }
   &__paragraph {
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 500;
     padding: 16px;
     &--researchInfo {
       grid-area: researchInfo;
@@ -81,8 +83,9 @@
       grid-area: safetyInfo;
     }
     &--Ue {
+      padding: 32px 0 0 0;
       grid-area: safetyPara;
-      font-size: 22px;
+      font-size: 28px;
       font-weight: 700;
       text-align: center;
     }

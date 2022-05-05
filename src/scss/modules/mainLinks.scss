@@ -2,23 +2,39 @@
   &--mainLinks {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 32px 0;
+    justify-content: space-between;
+    margin: 48px 48px;
   }
   &__tile {
     background-repeat: no-repeat;
+    opacity: 0.9;
     cursor: pointer;
     width: 30%;
-    height: 50vh;
-    margin: 32px 16px;
+    height: 35vh;
+    font-size: 32px;
+    font-weight: 700;
+    color: $text-white;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px black;
+    padding: 64px 0 0 24px;
+    transition: opacity 0.5s ease-in-out;
     &--analysis {
       background-image: url("/src/assets/img/analizy.png");
+      &:hover {
+        opacity: 1;
+      }
     }
     &--research {
       background-image: url("/src/assets/img/badania.png");
+      &:hover {
+        opacity: 1;
+      }
     }
     &--products {
       background-image: url("/src/assets/img/produkty.png");
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }

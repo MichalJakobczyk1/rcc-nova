@@ -6,27 +6,28 @@
     &--research {
       display: grid;
       grid-template-areas:
-        ". . research"
-        "researchImg researchInfo researchInfo";
-      grid-template-columns: 30% 20% 50%;
-      grid-template-rows: 10vh 20vh;
+        ". research"
+        "researchImg researchInfo";
+      grid-template-columns: 30% 1fr;
+      grid-template-rows: 10vh 30vh;
     }
     &--offer {
       display: grid;
       grid-template-areas:
-        "offer . ."
-        "offerInfo offerInfo offerImg";
-      grid-template-columns: 50% 20% 30%;
-      grid-template-rows: 10vh 20vh;
+        "offer ."
+        "offerInfo offerImg";
+      grid-template-columns: 1fr 30%;
+      grid-template-rows: 10vh 30vh;
     }
     &--safety {
+      margin: 32px 0;
       display: grid;
       grid-template-areas:
-        ". . safety"
-        "flagImg safetyInfo safetyInfo"
-        "flagImg safetyPara safetyPara";
-      grid-template-columns: 30% 20% 50%;
-      grid-template-rows: 10vh 20vh 5vh;
+        " . safety"
+        "flagImg safetyInfo "
+        "flagImg safetyPara ";
+      grid-template-columns: 30% 1fr;
+      grid-template-rows: 10vh 25vh 5vh;
     }
   }
   &--research {
@@ -34,8 +35,8 @@
     flex-direction: column;
   }
   &__image {
-    margin: auto;
-    width: 30vh;
+    width: 100%;
+    height: 100%;
     &--research {
       grid-area: researchImg;
     }

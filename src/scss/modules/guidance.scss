@@ -1,4 +1,56 @@
 .section {
+  &__image--guidance {
+    padding: 0 32px;
+  }
   &--guidance {
+    display: grid;
+    grid-template-areas:
+      ". guidance"
+      "guidanceImg guidanceInfo"
+      "guidanceImg guidanceMail"
+      "guidanceImg guidanceAnswear";
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 10vh 30vh 10vh 10vh;
+  }
+  &__h2--guidance {
+    grid-area: guidance;
+  }
+  &__image--guidance {
+    grid-area: guidanceImg;
+  }
+  &__paragraph {
+    &--guidance {
+      grid-area: guidanceInfo;
+    }
+    &--mailto {
+      font-weight: 700;
+    }
+    &--answear {
+      grid-area: guidanceAnswear;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+  &__link--mailto {
+    background: $logo-red;
+    padding: 8px 16px;
+    border-radius: 16px;
+    border: solid 3px $text-white;
+    color: $text-white;
+    cursor: pointer;
+    transition: all 0.35s ease-in-out;
+    &:hover {
+      background: $text-white;
+      border: solid 3px $logo-red;
+      color: $logo-red;
+    }
+  }
+  &__container--mailto {
+    grid-area: guidanceMail;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0 0 0;
+    font-size: 24px;
   }
 }

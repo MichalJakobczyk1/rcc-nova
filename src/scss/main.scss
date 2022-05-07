@@ -6,6 +6,8 @@
 @import "modules/logo.scss";
 @import "modules/guidance.scss";
 @import "modules/secondaryLinks.scss";
+@import "modules/partners.scss";
+@import "modules/footer.scss";
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=Roboto:wght@100;300;400;700&display=swap");
@@ -29,6 +31,7 @@ a {
     -moz-transition: none !important;
     -ms-transition: none !important;
     -o-transition: none !important;
+    transition: none;
   }
 }
 

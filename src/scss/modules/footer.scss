@@ -1,3 +1,74 @@
 .footer{
+    &__span {
+        font-family: "Rajdhani", sans-serif;
+        padding: 0 6px;
+        font-size: 48px;
+        &--red {
+          color: $logo-red;
+        }
+        &--blue {
+          color: $logo-blue;
+        }
+    }
+    &__image{
+        border-radius: 15px;
+    }
     background: $background;
+    display: grid;
+    grid-template-areas: ". logo form ."
+    ". adress adress ."
+    ". contact contact .";
+    grid-template-columns: 15% 1fr 2fr 15%;
+    grid-template-rows: 35vh 15vh 1fr;
+    &__container{
+        &--logo{
+            grid-area: logo;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        &--form{
+            grid-area: form;
+        }
+        &--adress{
+            grid-area: adress;
+            text-align: center;
+        }
+        &--contacts{
+            grid-area: contact;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        &--contact{
+            width: 30%;
+        }
+    }
+    &__paragraph{
+        font-size: 20px;
+        text-transform: uppercase;
+        &--red{
+            color: $logo-red;
+        }
+        &--adress{
+            color: $text-white;
+        }
+        &--logo {
+            padding: 0;
+            &-secondary{
+                font-size: 24px;
+                text-transform: lowercase;
+                margin: 0 0 16px 0;
+            }
+        }
+    }
+    &__link{
+        color: $text-white;
+        text-transform: lowercase;
+        font-size: 18px;
+        &--mail{
+            padding: 0 0 0 4px;
+        }
+    }
 }

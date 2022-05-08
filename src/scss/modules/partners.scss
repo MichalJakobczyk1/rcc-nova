@@ -1,5 +1,9 @@
 .section {
-  &__h2--partners{
+  &--partners {
+    margin: 64px 0 0 0;
+    padding: 32px 0 64px 0;
+  }
+  &__h2--partners {
     margin: 0 40%;
     border-radius: 15px;
     height: 60px;
@@ -13,19 +17,19 @@
   }
   &__container {
     margin: 32px 0 0 0;
-    &--image{
+    &--image {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 30%;
       padding: 8px;
     }
-    &--partners{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    &--partners {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

@@ -54,7 +54,7 @@
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    padding: 0 0 0 24px;
+    padding: 24px;
     &--research {
       grid-area: research;
     }
@@ -62,16 +62,14 @@
       grid-area: offer;
       border-radius: 0 15px 15px 0;
       justify-content: flex-end;
-      padding: 0 24px 0 0;
+      //padding: 0 24px 0 0;
     }
     &--safety {
-      justify-content: center;
       grid-area: safety;
-      height: 60px;
     }
   }
   &__paragraph {
-    font-size: 24px;
+    //font-size: 24px;
     font-weight: 500;
     padding: 16px;
     &--researchInfo {

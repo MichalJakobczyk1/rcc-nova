@@ -18,6 +18,7 @@
   &__span {
     font-family: "Rajdhani", sans-serif;
     padding: 0 6px;
+    font-size: $font-h1;
     &--red {
       color: $logo-red;
       &::before {
@@ -38,7 +39,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 18px;
+    font-size: $font-header;
     font-weight: 700;
     text-transform: uppercase;
     &Item {
@@ -94,7 +95,7 @@
       transition: color 0.5s ease-in-out;
       text-transform: uppercase;
       margin: 8px;
-      font-size: 18px;
+      font-size: $font-header;
       font-weight: 700;
       &::after {
         content: " ";

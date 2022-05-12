@@ -1,3 +1,4 @@
+//import { entries } from "core-js/core/array";
 import "../scss/main.scss";
 
 // uncomment the lines below to enable PWA
@@ -31,3 +32,29 @@ buttonLangEng.addEventListener("click", () => {
     buttonLangPl.classList.add("header__button--unactive");
   }
 });
+
+const threshold = document.querySelector(".section__article--offer");
+const header = document.querySelector(".header");
+const logo = document.querySelector(".section--logo");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio > 0) {
+      header.classList.add("header--modified");
+      header.classList.remove("header--demodified");
+    }
+  });
+});
+
+observer.observe(threshold);
+
+const observerReversed = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio > 0) {
+      header.classList.remove("header--modified");
+      header.classList.add("header--demodified");
+    }
+  });
+});
+
+observerReversed.observe(logo);
